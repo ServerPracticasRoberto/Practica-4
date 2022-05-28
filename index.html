@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - inicia sesión o registrate</title>
+    <style>
+        :root{
+    --colorBlue: #12325c;
+    --colorGrenn: #42b72a;
+    --colorMain: #63154f5e;
+    --colorWhite: #57c42c;
+    --colorText: #282a2d;
+    --colorLine: #2d3847;
+    --colorLinks: #4b67a1;
+    --colorborder: #0b1422;
+    --colorPlaceholder: #090911;
+    --colorCopy: #a33636;
+    --colorBotonMas: #325f8b;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 65%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+      font-size: 16px;
+      font-family: Helvetica, Arial, sans-serif;
+  }
+
+  h1, h2{
+      margin: 0;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  /*ESTRUCTURA GENERAL*/
+.padding-main{
+    padding: 72px 0 112px 0;
+}
+
+.bg{
+    background-color:lightblue;
+}
+
+.bold{
+    font-weight: bold;
+    color: var(--colorText);
+}
+
+.bold:hover{
+    text-decoration: underline;
+}
+
+.contenedor{
+    width: 98rem;
+    margin: 0 auto;
+}
+
+.pd-20{
+    padding: 2rem 0;
+}
+
+.dos-columnas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+}
+
+.contenedor-logo{
+    width: 550px;
+    height: 180.05px;
+    padding: 120px 0 16px 0;
+}
+
+.logo{
+    width: 301.067px;
+    height: 106px;
+    margin: -28px;
+}
+
+.eslogan{
+    width: 50rem;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 3.2rem;
+    color: var(--colorText);
+}
+
+/*FORM*/
+
+.shadow{
+    box-shadow: 0px 5px 7px #5f1818;
+}
+
+.card{
+    width: 396px;
+    height: 349.817px;
+    background-color:aquamarine;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 0 24px 0;
+    margin-top: 4rem;
+}
+
+.card input[type="EMAIL"], input[type="password"]{
+    display: inline-block;
+    width: 364px;
+    height: 52px;
+    padding: 14px 16px;
+    margin: 6px 0;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--colorborder);
+}
+
+.card input[type="EMAIL"]::placeholder, input[type="password"]::placeholder{
+    color: var(--colorPlaceholder);
+    font-size: 1.7rem;
+}
+
+.card input[type="EMAIL"]:focus, input[type="password"]:focus{
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0px 0px 1px var(--colorBotonMas);
+}
+
+.card input[type="submit"]:focus{
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0px 0px 3px var(--colorBlue);
+}
+
+.btn-blue{
+    width: 360px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    margin: 1rem 0 1.6rem 0;
+    padding: 0px 16px;
+    background-color: var(--colorBlue);
+    font-size: 2rem;
+    color:aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-blue:hover{
+    background-color: #1a3c68;
+}
+
+.link{
+    color: var(--colorPlaceholder);
+    font-size: 1.4rem;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.line{
+    height: 1px;
+    border-top: 1px solid var(--colorLine);
+    display: flex;
+    margin: 16px 16px;
+}
+
+.btn-green{
+    display: inline-block;
+    width: 190.75px;
+    height: 50px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: var(--colorLinks);
+    color:aliceblue;
+}
+
+.btn-green:hover{
+    background-color: #161b15;
+}
+
+.info{
+    grid-column: 2/3;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--colorText);
+    margin: 2.8rem 0 0 0;
+    line-height: 2rem;
+}
+
+/*FOOTER*/
+
+.links{
+    padding-top: 10px;
+}
+
+.links a{
+    color: #0e2c53;
+    font-size: 1.3rem;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+.links li{
+    display: inline-block;
+    padding-right: 1.8rem;
+}
+
+.line-fo{
+    height: 1px;
+    border-top: 1px solid var(--colorLine);
+    display: flex;
+    margin: 20px 20px;
+}
+    
+.copy{
+    margin: 2.5rem 0;
+    font-size: 1.1rem;
+    color: var(--colorCopy);
+}
+
+.btn-mas{
+    width: 45px;
+    height: 35px;
+    border: none;
+    margin: 1rem 0 1.6rem 0;
+    padding: 0px 16px;
+    font-weight: bold;
+    border: solid 1px  #ccd0d5;
+    font-size: 20px;
+    background-color: var(--colorBotonMas);
+    color: #f05151;
+}
+
+.btn-mas:hover{
+    background-color: #b31414;
+}
+    </style>
+</head>
+<body>
+    <main class="bg padding-main">
+        <div class="contenedor pd-20 dos-columnas">
+            <div>
+                <div class="contenedor-logo">
+                    <img class="logo" src="https://companiesmarketcap.com/img/company-logos/256/FB.png" alt="Logo de Facebook">
+                </div>
+                <h2 class="eslogan">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</h2>
+            </div>
+    
+            <div>
+                <form class="card shadow">
+                    <input type="email" placeholder="Correo electrónico o número de teléfono">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="submit" value="Iniciar sesion" class="btn-blue">
+                    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+                    <div class="line"></div>
+                    <a href="#" class="btn-green">Crear una cuenta nueva</a>
+                </form>
+                <p class="info"><a href="#" class="bold">Crear una página</a> para una celebridad, una marca o un negocio.</p>
+            </div>
+        </div>
+
+    </main>
+
+   
+</body>
+</html>
